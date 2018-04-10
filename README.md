@@ -1,2 +1,1 @@
-# gama-assignment2
-# gama-assignment2
+# MVP - XP Assignment 3 - Angular
