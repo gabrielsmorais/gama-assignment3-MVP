@@ -1,1 +1,1 @@
-# gama-assignment3-MVP
+# MVP - XP Assignment 3 - Assignment 3
