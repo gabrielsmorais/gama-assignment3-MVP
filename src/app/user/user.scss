@@ -1,7 +1,49 @@
-.image{
+.image {
   width: 100%
 }
 
-h4{
+#myForm {
+  margin: 20px;
+}
+
+h4 {
   white-space: pre-wrap;
+  font-family: "Lato", sans-serif;
+  // font-weight: bold;
+}
+
+label {
+  font-family: "Lato", sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  color: #B1AFAF;
+  margin-left: 50px;
+}
+
+button {
+  font-family: "Lato", sans-serif;
+  display: block;
+  margin: auto;
+  outline:none;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  border-radius:5px;
+  background: #fff;
+  border: 2px solid rgb(155, 224, 250);
+  color:grey;
+  letter-spacing:1px;
+  text-shadow:0;
+  font-size: 18px;
+  font-weight:bold;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color:white;
+    background: rgb(155, 224, 250);
+  }
+  &:active {
+    letter-spacing: 2px ;
+  }
 }

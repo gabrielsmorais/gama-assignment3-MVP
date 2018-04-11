@@ -20,7 +20,7 @@ export class UserComponent implements OnInit{
   questions = 
   [
 
-    {question: 'No primeiro contato com um prospect que você acredita que pode trazer grandes retornos à empresa, você:',
+    {question: '1. No primeiro contato com um prospect que você acredita que pode trazer grandes retornos à empresa, você:',
     alternatives: [
       { answer: 'Busca explicar a solução da sua empresa, com todas as funcionalidades do produto, de modo a ajudar o prospect a entender exatamente o que a empresa faz.', value: 0 },
       { answer: 'Buscar entender qual problema o prospect possui.', value: 10 },
@@ -29,7 +29,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Como vendedor:',
+    {question: '2. Como vendedor:',
     alternatives: [
       { answer: 'Você é excelente comunicador e vende mesmo para clientes clientes que não precisam da solução/produto.', value: 0 },
       { answer: 'Você vende para clientes que precisam da solução/produto e descarta os clientes que não precisam.', value: 10 },
@@ -38,7 +38,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Quando você desiste de um prospect?',
+    {question: '3. Quando você desiste de um prospect?',
     alternatives: [
       { answer: 'Eu não incomodo o prospect e caso ele não demonstre interesse, eu não entrarei em contato e nem venderei.', value: 0 },
       { answer: 'Eu crio um loop infinito de conversas até que eu feche com o cliente ou ele diga "Não".', value: 10 },
@@ -47,7 +47,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Assinale a alternativa mais correta:',
+    {question: '4. Assinale a alternativa mais correta:',
     alternatives: [
       { answer: 'A única forma de se conseguir leads é por meio de estratégia de inbound marketing.', value: 0 },
       { answer: 'Além do Inbound Marketing, é possível captar leads por meio de indicações de amigos e clientes. Essas leads oriundas de indicação são as que fecham contratos mais rapidamente. Não é interessante buscar ativamente por leads, já que a estratégia de abordagem fria incomoda as pessoas.', value: 0 },
@@ -56,7 +56,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Alessandra é a melhor vendedora na Goal Hunter, conhecida por trabalhar com foco no cliente. Seu gestor, no mês passado, escreveu uma recomendação para Alessandra no LinkedIn. Como você completaria o texto conforme a ordem acima? “Aprendi, na teoria e prática, que um bom vendedor ao iniciar uma negociação necessita compreender de forma clara os objetivos que _______ possui a curto, médio e longo prazo. Alessandra, além disso, apresenta _________ para sanar as dores do lead, estabelece relações ________, criando valor e aumentando o engajamento. Por conta disso, ________ realiza a venda de produtos desnecessários para aumentar a receita e alcançar o 1º lugar no ranking de vendas da Goal Hunter, pois está constantemente focado nos objetivos _________. Recomendo Alessandra, mas espero que ela faça parte do meu time por muito tempo.”',
+    {question: '5. Alessandra é a melhor vendedora na Goal Hunter, conhecida por trabalhar com foco no cliente. Seu gestor, no mês passado, escreveu uma recomendação para Alessandra no LinkedIn. Como você completaria o texto conforme a ordem acima? “Aprendi, na teoria e prática, que um bom vendedor ao iniciar uma negociação necessita compreender de forma clara os objetivos que _______ possui a curto, médio e longo prazo. Alessandra, além disso, apresenta _________ para sanar as dores do lead, estabelece relações ________, criando valor e aumentando o engajamento. Por conta disso, ________ realiza a venda de produtos desnecessários para aumentar a receita e alcançar o 1º lugar no ranking de vendas da Goal Hunter, pois está constantemente focado nos objetivos _________. Recomendo Alessandra, mas espero que ela faça parte do meu time por muito tempo.”',
     alternatives: [
       { answer: 'O lead / a solução ideal / humanizadas / nunca / do lead', value: 10 },
       { answer: 'A empresa / o maior desconto / perde-ganha / sempre / da empresa', value: 0 },
@@ -65,7 +65,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Determine se é Verdadeiro (V) ou Falso (F): \nI) Na estratégia de Inbound Sales, o conteúdo – que pode ser blog post, vídeo, webinar, etc – é a principal ferramenta para a atração do lead \nII) A estratégia de Outbound Sales é necessariamente ativa',
+    {question: '6. Determine se é Verdadeiro (V) ou Falso (F): \nI) Na estratégia de Inbound Sales, o conteúdo – que pode ser blog post, vídeo, webinar, etc – é a principal ferramenta para a atração do lead \nII) A estratégia de Outbound Sales é necessariamente ativa',
     alternatives: [
       { answer: 'F - F - V - F - V', value: 0 },
       { answer: 'V - V - F - F - F', value: 10 },
@@ -75,7 +75,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Sabemos que, quanto mais rápido o contato com um lead após ocorrer a “levantada de mão”, maiores são as chances de conversão em cliente. Você trabalha em uma empresa com a metodologia Inbound e acabou de chegar um lead no seu CRM que solicitou contato há 1 minuto atrás. Você sabe o nome e o telefone dele, qual é a sua próxima ação?',
+    {question: '7. Sabemos que, quanto mais rápido o contato com um lead após ocorrer a “levantada de mão”, maiores são as chances de conversão em cliente. Você trabalha em uma empresa com a metodologia Inbound e acabou de chegar um lead no seu CRM que solicitou contato há 1 minuto atrás. Você sabe o nome e o telefone dele, qual é a sua próxima ação?',
     alternatives: [
       { answer: 'Pesquisar o perfil dele no Linkedin de forma detalhada com o intuito de descobrir a empresa em que trabalha e a função que ele exerce, além de verificar as conexões que ele possui em comum com você para fazer um contato quando possível', value: 10 },
       { answer: 'Buscar informações rápidas sobre o lead, através do Linkedin e/ou outras ferramentas, mas ainda buscar o contato entre 2 e 5 minutos após sua levantada de mão', value: 0 },
@@ -85,7 +85,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Determine se é Verdadeiro (V) ou Falso (F).\nA venda para leads chamados “Ideal Customer Profile” ocasiona a médio e longo prazo:\nI) Aumento da taxa de churn\nII) Menor necessidade de qualificação\nIII) Um cliente mais satisfeito\nIV) Aumento do ciclo de vendas\nV) Maior engajamento',
+    {question: '8. Determine se é Verdadeiro (V) ou Falso (F).\nA venda para leads chamados “Ideal Customer Profile” ocasiona a médio e longo prazo:\nI) Aumento da taxa de churn\nII) Menor necessidade de qualificação\nIII) Um cliente mais satisfeito\nIV) Aumento do ciclo de vendas\nV) Maior engajamento',
     alternatives: [
       { answer: 'F - F - F - F - V', value: 0 },
       { answer: 'V - V - V - F - V', value: 0 },
@@ -95,7 +95,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Qual das duas abordagens de e-mail parece fazer mais sentido para você e por quê?\nI) Assunto: Apresentação Gabriel - Olá, Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. É o caso de vocês? Faz sentido conversar 10 minutos sobre o assunto em algum horário após as 16:00 de quinta ou sexta?\nII) Assunto: Como melhorar seu recrutamento! Olá Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. Por favor me deixe saber se é um assunto importante para vocês. Obrigado!',
+    {question: '9. Qual das duas abordagens de e-mail parece fazer mais sentido para você e por quê?\nI) Assunto: Apresentação Gabriel - Olá, Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. É o caso de vocês? Faz sentido conversar 10 minutos sobre o assunto em algum horário após as 16:00 de quinta ou sexta?\nII) Assunto: Como melhorar seu recrutamento! Olá Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. Por favor me deixe saber se é um assunto importante para vocês. Obrigado!',
     alternatives: [
       { answer: 'A I, pois a personalização no assunto e a call-to-action no fim do e-mail tendem a aumentar os índices de abertura e resposta, respectivamente', value: 0 },
       { answer: 'A I, pois, apesar da sugestão final ter diferentes percepções por públicos mais ou menos corporativos, possui um assunto menos interruptivo', value: 0 },
@@ -104,7 +104,7 @@ export class UserComponent implements OnInit{
     ],
   },
 
-    {question: 'Você está finalizando uma call com o lead e precisa decidir qual o próximo passo que realizará para avançar o deal, você tem duas opções:\nI) Ainda na ligação, agenda data e hora da próxima call e logo após envia um e-mail com breve resumo do que conversaram.\nII) Informa o lead que irá enviar um e-mail com todas as informações do produto, encerra a call e ao escrever o e-mail sugere uma data e horário para a tirar as dúvidas do lead e avançar o deal.',
+    {question: '10. Você está finalizando uma call com o lead e precisa decidir qual o próximo passo que realizará para avançar o deal, você tem duas opções:\nI) Ainda na ligação, agenda data e hora da próxima call e logo após envia um e-mail com breve resumo do que conversaram.\nII) Informa o lead que irá enviar um e-mail com todas as informações do produto, encerra a call e ao escrever o e-mail sugere uma data e horário para a tirar as dúvidas do lead e avançar o deal.',
     alternatives: [
       { answer: 'A I, pois com a próxima ação agendada, tenho maior controle da negociação e favorecimento para que meu pipeline seja verdadeiro, consistente e previsível', value: 10 },
       { answer: 'A II, pois, se o lead tiver alguma dúvida, pode consultar o meu e-mail com as informações detalhadas e o deixarei à vontade para marcar a próxima conversa comigo; assim não irei atrapalhá-lo, vou gerar relevância com as informações e isolar as possíveis objeções', value: 0 },
@@ -112,7 +112,7 @@ export class UserComponent implements OnInit{
   },
 
 
-    {question: 'O que são as Buyer Personas?',
+    {question: '11. O que são as Buyer Personas?',
     alternatives: [
       { answer: 'O público-alvo que se deseja atingir.', value: 0 },
       { answer: 'Uma simulação da identidade da marca da minha empresa, o mesmo que Brand Persona.', value: 0 },
