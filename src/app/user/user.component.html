@@ -14,17 +14,8 @@
 </div>
 <div class="container" *ngFor = "let question of questions" id="myForm">
   <h4>{{question.question}}</h4>
-  <label class="radio">
-    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value1"> {{question.answer1}} {{question.value1}}
-  </label>
-  <label class="radio">
-    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value2"> {{question.answer2}} {{question.value2}}
-  </label>
-  <label class="radio">
-    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value3"> {{question.answer3}} {{question.value3}}
-  </label>
-  <label class="radio">
-    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value4"> {{question.answer4}} {{question.value4}}
+  <label class="radio" *ngFor="let alternative of question.alternatives">
+    <input class="subtotal" type="radio" name="{{question.question}}" value="{{alternative.value}}"> {{alternative.answer}} {{alternative.value}}
   </label>
 </div>
 <button (click)="sumValue()">send</button>
