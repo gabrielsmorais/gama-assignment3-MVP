@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="card" style="width: 20rem;">
+        <div class="card-body">
+          <h4 class="card-title">{{user.name}}</h4>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <button type="button" (click)="logout()" class="btn btn-link">Logout</button>
+    </div>
+  </div>
+</div>
+<div class="container" *ngFor = "let question of questions" id="myForm">
+  <h4>{{question.question}}</h4>
+  <label class="radio">
+    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value1"> {{question.answer1}} {{question.value1}}
+  </label>
+  <label class="radio">
+    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value2"> {{question.answer2}} {{question.value2}}
+  </label>
+  <label class="radio">
+    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value3"> {{question.answer3}} {{question.value3}}
+  </label>
+  <label class="radio">
+    <input class="subtotal" type="radio" name="{{question.question}}" value="question.value4"> {{question.answer4}} {{question.value4}}
+  </label>
+</div>
+<button (click)="sumValue()">send</button>
