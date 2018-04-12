@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { FirebaseUserModel } from '../core/user.model';
 import { FormsModule } from '@angular/forms';
+import { forEach } from '@angular/router/src/utils/collection';
 
 
 @Component({
@@ -164,18 +165,10 @@ export class UserComponent implements OnInit{
   }
 
   sumValue(){
-    let radius = document.querySelectorAll(".subtotal:checked");
-    if(radius.length == 11){
-      console.log(radius);
-      for (let index = 0; index < radius.length; index++) {
-        console.log(radius[index].value);
-        if(radius[index].value == 0){
-          radius.splice(index, 1);
-        }
-      }
-      console.log(radius);
-    } else {
-      console.log('error');
-    }
+
+    this.questions.forEach(question => {
+        question.alternatives = question.alternatives.filter(a => a.value != 0);
+    });
+
   }
 }

@@ -12,12 +12,12 @@
     </div>
   </div>
 </div>
-<form>
+<div>
   <div class="container" *ngFor = "let question of questions">
     <h4>{{question.question}}</h4>
     <label class="radio" *ngFor="let alternative of question.alternatives">
-      <input class="subtotal" type="radio" name="{{question.question}}" value="{{alternative.value}}"> {{alternative.answer}} {{alternative.value}}
+      <input class="subtotal" type="radio" [attr.name]="question.question" [value]="alternative.value" [(ngModel)]="question.answer" name="question.question"> {{alternative.answer}} {{alternative.value}}
     </label>
   </div>
-</form>
+</div>
 <button (click)="sumValue()">ENVIAR</button>
