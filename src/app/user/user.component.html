@@ -12,10 +12,12 @@
     </div>
   </div>
 </div>
-<div class="container" *ngFor = "let question of questions" id="myForm">
-  <h4>{{question.question}}</h4>
-  <label class="radio" *ngFor="let alternative of question.alternatives">
-    <input class="subtotal" type="radio" name="{{question.question}}" value="{{alternative.value}}"> {{alternative.answer}} {{alternative.value}}
-  </label>
-</div>
+<form>
+  <div class="container" *ngFor = "let question of questions">
+    <h4>{{question.question}}</h4>
+    <label class="radio" *ngFor="let alternative of question.alternatives">
+      <input class="subtotal" type="radio" name="{{question.question}}" value="{{alternative.value}}"> {{alternative.answer}} {{alternative.value}}
+    </label>
+  </div>
+</form>
 <button (click)="sumValue()">ENVIAR</button>
