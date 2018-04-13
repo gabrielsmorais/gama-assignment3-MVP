@@ -13,11 +13,47 @@
   </div>
 </div>
 <div>
-  <div class="container" *ngFor = "let question of questions">
-    <h4>{{question.question}}</h4>
-    <label class="radio" *ngFor="let alternative of question.alternatives">
-      <input class="subtotal" type="radio" [attr.name]="question.question" [value]="alternative.value" [(ngModel)]="question.answer" name="question.question"> {{alternative.answer}} {{alternative.value}}
-    </label>
+  <div id="answers">
+    <div class="container">
+      <h4>1. No primeiro contato com um prospect que você acredita que pode trazer grandes retornos à empresa, você:</h4>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta1" value="10">
+        Busca explicar a solução da sua empresa, com todas as funcionalidades do produto, de modo a ajudar o prospect a entender exatamente o que a empresa faz.
+      </label>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta1" value="15">
+        Buscar entender qual problema o prospect possui.
+      </label>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta1" value="20">
+        Fala da história da empresa para criar credibilidade e, em seguida, explica a solução detalhadamente.
+      </label>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta1" value="15">
+        Fala da história da empresa para criar credibilidade, explica detalhadamente a solução, contextualizando qual problema ela
+        resolve.
+      </label>
+      
+      <h4>2. Como vendedor:</h4>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta2">
+        Você é excelente comunicador e vende mesmo para clientes clientes que não precisam da solução/produto.
+      </label>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta2">
+          Você vende para clientes que precisam da solução/produto e descarta os clientes que não precisam.
+      </label>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta2">
+          Você busca entender o problema dos clientes que não precisam da solução/produto, convence-os de que precisam e consegue
+          vender.
+      </label>
+      <label class="radio">
+        <input class="subtotal" type="radio" name="pergunta2">
+            Você entende que os clientes se incomodam com vendedores e espera eles demonstrarem interesse na sua solução/produto para
+          fazer a venda; de modo a não incomodar os clientes com abordagens frias.
+      </label>
+    </div>
   </div>
 </div>
-<button (click)="sumValue()">ENVIAR</button>
+<button (click)="getValue('Breno')">ENVIAR</button>
