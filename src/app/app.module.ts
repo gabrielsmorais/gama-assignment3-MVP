@@ -22,6 +22,8 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
 import { FirebaseUserModel } from "./core/user.model";
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { EventsModule } from 'angular4-events';
 
@@ -44,9 +46,10 @@ import { EventsModule } from 'angular4-events';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     FormsModule,
     RouterModule,
-    EventsModule.forRoot()
+    EventsModule.forRoot(),
+    HttpClientModule
   ],
-  providers: [AuthService, UserService, UserResolver, AuthGuard, FirebaseUserModel],
+  providers: [AuthService, UserService, UserResolver, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
