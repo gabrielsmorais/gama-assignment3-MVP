@@ -6,6 +6,7 @@ import { Location } from '@angular/common';
 import { FirebaseUserModel } from '../core/user.model';
 import { FormsModule } from '@angular/forms';
 import { forEach } from '@angular/router/src/utils/collection';
+import { Router, Params } from '@angular/router';
 
 
 @Component({
@@ -143,6 +144,7 @@ export class UserComponent implements OnInit{
     public authService: AuthService,
     private route: ActivatedRoute,
     private location : Location,
+    private router: Router
   ) {
 
   }
@@ -176,10 +178,11 @@ export class UserComponent implements OnInit{
     if (result < 40) {
       this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é junior.`
     } else if (result > 41 && result < 80){
-      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é pleno.`
+      this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é pleno.`
     }else{
-      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é senior.`
+      this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é senior.`
     }
+    this.router.navigate(['/thank-you']);
     return this.finalResult;
   }
 }

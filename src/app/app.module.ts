@@ -17,13 +17,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserComponent,
-    RegisterComponent
+    RegisterComponent,
+    ThankYouComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { AppComponent } from './app.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard],
   bootstrap: [AppComponent]
