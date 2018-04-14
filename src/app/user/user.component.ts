@@ -17,6 +17,7 @@ import { forEach } from '@angular/router/src/utils/collection';
 
 export class UserComponent implements OnInit{
 
+  finalResult;
   outro: Element[];
   user: FirebaseUserModel = new FirebaseUserModel();
   questions = 
@@ -169,10 +170,16 @@ export class UserComponent implements OnInit{
 
 
     this.outro = [].slice.call(document.querySelectorAll(".right:checked"));
-    console.log(this.outro);
 
     let result = (this.outro.length / this.questions.length) * 100;
-    console.log(result);
 
-}
+    if (result < 40) {
+      this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é junior.`
+    } else if (result > 41 && result < 80){
+      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é pleno.`
+    }else{
+      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é senior.`
+    }
+    return this.finalResult;
+  }
 }
