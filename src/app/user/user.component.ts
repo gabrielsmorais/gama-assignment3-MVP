@@ -20,11 +20,10 @@ export class UserComponent implements OnInit {
     user: FirebaseUserModel = new FirebaseUserModel();
 
     constructor(
-
         public userService: UserService,
         public authService: AuthService,
         private route: ActivatedRoute,
-        private location: Location,
+        private location: Location
     ) {
 
     }
@@ -48,9 +47,16 @@ export class UserComponent implements OnInit {
             });
     }
 
-    sumValue() {
+    getValue() {
+        console.warn('---------', this);
+        this.sumValue();
 
+    }
+    sumValue() {
+        let pergunta1 = document.getElementsByClassName('pergunta1');
+        // console.log(pergunta1[0].nodeValue);
         // this.questions.forEach(question => {
+
         //     question.alternatives = question.alternatives.filter(a => a.value != 0);
         // });
 
