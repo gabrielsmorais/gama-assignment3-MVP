@@ -1,18 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-4 col-md-offset-4">
-      <div class="card" style="width: 20rem;">
-        <div class="card-body">
-          <h4 class="card-title">{{user.name}}</h4>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <button type="button" (click)="logout()" class="btn btn-link">Logout</button>
-    </div>
-  </div>
-</div>
 <form ngNativeValidate (ngSubmit)="sumValue()">
+  <h1>{{user.name}}</h1>
   <div class="container" *ngFor = "let question of questions">
     <h4>{{question.question}}</h4>
     <label class="radio" *ngFor="let alternative of question.alternatives">
