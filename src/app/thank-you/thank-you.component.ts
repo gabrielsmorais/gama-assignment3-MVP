@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { UserService } from '../core/user.service';
 
 @Component({
   selector: 'app-thank-you',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ThankYouComponent implements OnInit {
 
-  constructor() { }
+  resultado: string;
+
+  constructor(public user: UserService) {
+    this.resultado = user.resultado;
+  }
 
   ngOnInit() {
   }

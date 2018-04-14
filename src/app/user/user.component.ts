@@ -9,6 +9,7 @@ import { forEach } from '@angular/router/src/utils/collection';
 import { Router, Params } from '@angular/router';
 
 
+
 @Component({
   selector: 'page-user',
   templateUrl: 'user.component.html',
@@ -183,6 +184,7 @@ export class UserComponent implements OnInit{
       this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é senior.`
     }
     this.router.navigate(['/thank-you']);
+    this.userService.resultado = this.finalResult;
     return this.finalResult;
   }
 }

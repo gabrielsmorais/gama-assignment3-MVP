@@ -7,6 +7,7 @@ import * as firebase from 'firebase/app';
 @Injectable()
 export class UserService {
 
+  string: any;
   constructor(
    public db: AngularFirestore,
    public afAuth: AngularFireAuth
@@ -36,5 +37,13 @@ export class UserService {
         resolve(res)
       }, err => reject(err))
     })
+  }
+
+  set resultado(string){
+    this.string = string;
+  }
+
+  get resultado(){
+    return this.string;
   }
 }
