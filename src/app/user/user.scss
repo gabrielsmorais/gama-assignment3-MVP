@@ -47,3 +47,10 @@ button {
     letter-spacing: 2px ;
   }
 }
+
+.container input[type="radio"] {
+  position: absolute;
+  left: -27px;
+  margin: auto;
+  cursor: pointer;
+}

@@ -16,7 +16,7 @@
   <div class="container" *ngFor = "let question of questions">
     <h4>{{question.question}}</h4>
     <label class="radio" *ngFor="let alternative of question.alternatives">
-      <input class="subtotal" type="radio" [attr.name]="question.question" [value]="alternative.value" [(ngModel)]="question.answer" name="question.question"> {{alternative.answer}} {{alternative.value}}
+      <input  class="subtotal checkmark" type="radio" [attr.name]="question.question" [value]="alternative.value" [attr.id]="alternative.id" [attr.class]="alternative.class"> <span class="radio">{{alternative.answer}} {{alternative.value}}</span>
     </label>
   </div>
 </div>
