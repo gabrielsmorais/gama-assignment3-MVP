@@ -7,6 +7,7 @@ import { FirebaseUserModel } from '../../core/user.model';
 import { FormsModule } from '@angular/forms';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router, Params } from '@angular/router';
+import { EventsService } from 'angular4-events';
 
 @Component({
   selector: 'app-header',
@@ -14,25 +15,31 @@ import { Router, Params } from '@angular/router';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  user: FirebaseUserModel = new FirebaseUserModel();
+  // user: FirebaseUserModel = new FirebaseUserModel();
+  user: string;
 
   constructor(
     public userService: UserService,
     public authService: AuthService,
     private route: ActivatedRoute,
     private location: Location,
-    private router: Router  
+    private router: Router,
+    private pubsub: EventsService
   ) { }
 
   ngOnInit() {
-    this.route.data.subscribe(routeData => {
-      console.log(routeData);
-      let data = routeData['data'];
-      if (data) {
-        this.user = data;
-        console.log(this.user);
-      }
-    })
+    // this.route.data.subscribe(routeData => {
+    //   console.log(routeData);
+    //   let data = routeData['data'];
+    //   if (data) {
+    //     this.user = data;
+    //     console.log(this.user);
+    //   }
+    // })
+    this.pubsub.subscribe('usuario').subscribe(res => {
+      console.log(res);
+      this.user = res.email;
+    });
   }
 
   logout() {

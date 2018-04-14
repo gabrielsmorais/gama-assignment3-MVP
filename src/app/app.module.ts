@@ -23,6 +23,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 
 import { FirebaseUserModel } from "./core/user.model";
 
+import { EventsModule } from 'angular4-events';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { FirebaseUserModel } from "./core/user.model";
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     FormsModule,
-    RouterModule
+    RouterModule,
+    EventsModule.forRoot()
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard, FirebaseUserModel],
   bootstrap: [AppComponent]

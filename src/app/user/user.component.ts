@@ -7,7 +7,7 @@ import { FirebaseUserModel } from '../core/user.model';
 import { FormsModule } from '@angular/forms';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router, Params } from '@angular/router';
-
+import { EventsService } from 'angular4-events';
 
 
 @Component({
@@ -145,7 +145,8 @@ export class UserComponent implements OnInit{
     public authService: AuthService,
     private route: ActivatedRoute,
     private location : Location,
-    private router: Router
+    private router: Router,
+    private pubsub: EventsService
   ) {
 
   }
@@ -155,6 +156,7 @@ export class UserComponent implements OnInit{
       let data = routeData['data'];
       if (data) {
         this.user = data;
+        this.pubsub.publish('usuario', data);
       }
     })
     
