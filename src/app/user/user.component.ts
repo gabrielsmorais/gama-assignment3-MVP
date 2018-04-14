@@ -7,7 +7,9 @@ import { FirebaseUserModel } from '../core/user.model';
 import { FormsModule } from '@angular/forms';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router, Params } from '@angular/router';
-
+import { AngularFirestore } from 'angularfire2/firestore';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -21,6 +23,7 @@ export class UserComponent implements OnInit{
 
   finalResult;
   outro: Element[];
+  all: Element[];
   user: FirebaseUserModel = new FirebaseUserModel();
   questions = 
   [
@@ -140,12 +143,13 @@ export class UserComponent implements OnInit{
 
   ];
   constructor(
-
     public userService: UserService,
     public authService: AuthService,
     private route: ActivatedRoute,
     private location : Location,
-    private router: Router
+    private router: Router,
+    public db: AngularFirestore,
+    private http: HttpClient
   ) {
 
   }
@@ -171,20 +175,32 @@ export class UserComponent implements OnInit{
 
   sumValue(){
 
-
     this.outro = [].slice.call(document.querySelectorAll(".right:checked"));
-
     let result = (this.outro.length / this.questions.length) * 100;
 
-    if (result < 40) {
+    if (result < 50) {
       this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é junior.`
-    } else if (result > 41 && result < 80){
+    } else if (result > 51 && result < 80){
       this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é pleno.`
     }else{
       this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é senior.`
     }
     this.router.navigate(['/thank-you']);
     this.userService.resultado = this.finalResult;
+    const req = this.http.post(`${environment.firebase.databaseURL}/results.json`, {
+      result:result,
+      user:this.user
+    })
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log("Error occured");
+        }
+      );
+
+    
     return this.finalResult;
   }
 }

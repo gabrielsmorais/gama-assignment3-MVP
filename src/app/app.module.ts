@@ -18,6 +18,8 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     FormsModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard],
   bootstrap: [AppComponent]

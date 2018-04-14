@@ -12,12 +12,12 @@
     </div>
   </div>
 </div>
-<div>
+<form ngNativeValidate (ngSubmit)="sumValue()">
   <div class="container" *ngFor = "let question of questions">
     <h4>{{question.question}}</h4>
     <label class="radio" *ngFor="let alternative of question.alternatives">
-      <input  class="subtotal checkmark" type="radio" [attr.name]="question.question" [value]="alternative.value" [attr.id]="alternative.id" [attr.class]="alternative.class"> <span class="radio">{{alternative.answer}} {{alternative.value}}</span>
+      <input required class="subtotal checkmark" type="radio" [attr.name]="question.question" [value]="alternative.value" [attr.id]="alternative.id" [attr.class]="alternative.class" [attr.required]="true"> <span class="radio">{{alternative.answer}} {{alternative.value}}</span>
     </label>
   </div>
-</div>
-<button (click)="sumValue()">ENVIAR</button>
+  <input type="submit" id="submit" value="Submit" />
+</form>
