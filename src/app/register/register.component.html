@@ -14,23 +14,26 @@
             <label class="error">{{errorMessage}}</label>
             <label class="success">{{successMessage}}</label>
           </div>
-          <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-default">Registrar</button>
+          <div class="pull-right">
+            <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-success">Registrar</button>
+          </div>
         </form>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-4 col-md-offset-4">
+      <div class="col-sm-4 col-xs-12 col-sm-offset-2">
         <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()">Registrar com Facebook</button>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4">
+      <div class="col-xs-4">
         <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Registrar com Google</button>
       </div>
     </div>
+    <br>
     <div class="row">
-      <div class="col-md-4 col-md-offset-4">
-        <p>Já tem uma conta? <a href="/login">Login</a></p>
+      <div class="col-sm-4 col-sm-offset-4">
+        <p>Já tem uma conta?
+          <a href="/login">Faça seu Login</a>
+        </p>
       </div>
     </div>
   </div>

@@ -18,6 +18,10 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ThankYouComponent } from './thank-you/thank-you.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
+
+import { FirebaseUserModel } from "./core/user.model";
 
 @NgModule({
   declarations: [
@@ -25,7 +29,9 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     LoginComponent,
     UserComponent,
     RegisterComponent,
-    ThankYouComponent
+    ThankYouComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,7 @@ import { ThankYouComponent } from './thank-you/thank-you.component';
     FormsModule,
     RouterModule
   ],
-  providers: [AuthService, UserService, UserResolver, AuthGuard],
+  providers: [AuthService, UserService, UserResolver, AuthGuard, FirebaseUserModel],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
