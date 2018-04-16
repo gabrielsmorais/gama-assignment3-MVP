@@ -1,0 +1,70 @@
+.root{
+    font-family: "Lato", sans-serif !important;
+    height: 80vh;
+    width: 100vw;
+    background: #bde4d3;
+    text-align: center;
+  }
+  
+  h1{
+    margin: 30px;
+    display: block;
+    text-align: center;
+  }
+  
+  .header{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .row{
+    margin-top: 10px;
+  }
+  
+  .navbar-default {
+    margin-bottom: 0;
+  }
+  
+  .image {
+  width: 100%;
+  margin: 0;
+  }
+
+  .img-responsive {
+    margin: auto;
+  }
+  
+  .navbar-brand {
+    display: block;
+    padding: 8px;
+    img {
+        max-height: 100%;
+    }
+  }
+
+  p{
+      font-size: 20px;
+  }
+  
+  .texto{
+    margin-top: 150px;
+  }
+
+    footer{
+      margin: 0 !important;
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 1000px) {
+    .imagem{
+      display: none;
+    }
+    .texto{
+        margin: auto;
+    }
+
+    .root{
+        height: 110vh;
+    }
+  }
