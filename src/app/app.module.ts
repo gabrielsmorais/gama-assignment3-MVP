@@ -25,6 +25,8 @@ import { FirebaseUserModel } from "./core/user.model";
 import { HttpClientModule } from '@angular/common/http';
 
 
+import { EventsModule } from 'angular4-events';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +46,7 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
     FormsModule,
     RouterModule,
+    EventsModule.forRoot(),
     HttpClientModule
   ],
   providers: [AuthService, UserService, UserResolver, AuthGuard],

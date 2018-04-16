@@ -7,6 +7,7 @@ import { FirebaseUserModel } from '../core/user.model';
 import { FormsModule } from '@angular/forms';
 import { forEach } from '@angular/router/src/utils/collection';
 import { Router, Params } from '@angular/router';
+import { EventsService } from 'angular4-events';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
@@ -148,6 +149,7 @@ export class UserComponent implements OnInit{
     private route: ActivatedRoute,
     private location : Location,
     private router: Router,
+    private pubsub: EventsService
     public db: AngularFirestore,
     private http: HttpClient
   ) {
@@ -159,6 +161,7 @@ export class UserComponent implements OnInit{
       let data = routeData['data'];
       if (data) {
         this.user = data;
+        this.pubsub.publish('usuario', data);
       }
     })
     
