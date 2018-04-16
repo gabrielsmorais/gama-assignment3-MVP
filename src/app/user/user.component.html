@@ -1,24 +1,7 @@
-<header>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="pull-left col-md-8">
-        <a class="navbar-brand" href="/">
-          <img src="assets/img/logo.png" alt="" class="img-responsive">
-        </a>
-        <p class="navbar-text">Você está logado como: <strong>{{user.name}}</strong></p>
-      </div>
-      <div class="pull-right">
-        <button type="button" (click)="logout()" class="btn btn-default navbar-btn">Logout</button>
-      </div>
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-</header>
 <section id="banner">
   <div class="container">
     <div class="col-md-8">
-      <h2>Olá, candidato!</h2>
+      <h2>Olá, {{user.name}}!</h2>
       <h3 class="text-justify">Primeiro precisamos conhecer suas habilidades técnicas e também aspectos comportamentais, assim você estará alinhado à vaga
       que esteja adequada ao seu perfil. Sabemos que, muitas vezes, trabalhamos em organizações que não estão sintonizadas aos
       nossos valores, prioridades e expectativas; e isso acaba gerando frustrações em ambos os lados.</h3>

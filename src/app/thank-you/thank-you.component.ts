@@ -16,5 +16,4 @@ export class ThankYouComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

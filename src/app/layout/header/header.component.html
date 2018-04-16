@@ -6,7 +6,6 @@
         <a class="navbar-brand col-md-12" href="#">
           <img src="assets/img/logo.png" alt="" class="img-responsive">
         </a>
-        <p class="navbar-text">{{user.name}}</p>
       </div>
       <div class="pull-right" *ngIf="router.url !== '/login' && router.url !== '/register'">
         <button type="button" (click)="logout()" class="btn btn-default navbar-btn">Logout</button>

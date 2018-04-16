@@ -27,17 +27,17 @@ export class UserService {
     })
   }
 
-  updateCurrentUser(value){
-    return new Promise((resolve, reject) => {
-      var user = firebase.auth().currentUser;
-      user.updateProfile({
-        displayName: value.name,
-        photoURL: user.photoURL
-      }).then(res => {
-        resolve(res)
-      }, err => reject(err))
-    })
-  }
+  // updateCurrentUser(value){
+  //   return new Promise((resolve, reject) => {
+  //     var user = firebase.auth().currentUser;
+  //     user.updateProfile({
+  //       displayName: value.name,
+  //       photoURL: user.photoURL
+  //     }).then(res => {
+  //       resolve(res)
+  //     }, err => reject(err))
+  //   })
+  // }
 
   set resultado(string){
     this.string = string;
