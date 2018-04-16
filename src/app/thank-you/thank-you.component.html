@@ -1,3 +1,35 @@
-<p>
-  {{resultado}}
-</p>
+<div class="root">
+    <header>
+        <nav class="navbar navbar-default">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="pull-left col-md-8">
+              <a class="navbar-brand" href="http://goalhunter.com.br/">
+                <img src="assets/img/logo.png" alt="" class="img-responsive">
+              </a>
+              <p class="navbar-text">Você está logado como: <strong>{{user.name}}</strong></p>
+            </div>
+            <div class="pull-right">
+              <button type="button" (click)="logout()" class="btn btn-default navbar-btn">Logout</button>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Parabéns!</h2>
+        <h4>Você contribuiu para o futuro!</h4>
+        <img src="assets/img/medalha.png" alt="Medalha" class="img-responsive imagem">
+      </div>
+      <div class="col-md-8 texto">
+        <p>Os profissionais de vendas e hustlers agradecem pela sua colaboração.</p>
+        <p>{{resultado}}</p>
+        <p>Saiba que você é uma pessoa privilegiada e com diferencial, o mercado precisa te conhecer e direcionar você para
+          a vaga perfeita do seu perfil</p>
+        <p>Muito obrigado por fazer parte da tribo de transformadores!</p>
+      </div>
+    </div>
+  </div>
+</div>
