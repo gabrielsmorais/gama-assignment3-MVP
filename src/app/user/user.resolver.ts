@@ -6,7 +6,7 @@ import { FirebaseUserModel } from '../core/user.model';
 @Injectable()
 export class UserResolver implements Resolve<FirebaseUserModel> {
 
-  constructor(public userService: UserService, private router: Router) { }
+  constructor(public userService: UserService, public router: Router) { }
 
   resolve(route: ActivatedRouteSnapshot) : Promise<FirebaseUserModel> {
 

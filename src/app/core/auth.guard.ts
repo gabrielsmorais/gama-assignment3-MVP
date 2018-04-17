@@ -10,7 +10,7 @@ export class AuthGuard implements CanActivate {
   constructor(
     public afAuth: AngularFireAuth,
     public userService: UserService,
-    private router: Router
+    public router: Router
   ) {}
 
   canActivate(): Promise<boolean>{

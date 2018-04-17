@@ -40,7 +40,7 @@ export class UserComponent implements OnInit{
 
     {question: '2. Como vendedor:',
     alternatives: [
-      { answer: 'Você é excelente comunicador e vende mesmo para clientes clientes que não precisam da solução/produto.', value: 0, class: 'wrong' },
+      { answer: 'Você é excelente comunicador e vende mesmo para clientes que não precisam da solução/produto.', value: 0, class: 'wrong' },
       { answer: 'Você vende para clientes que precisam da solução/produto e descarta os clientes que não precisam.', value: 10, class: 'right' },
       { answer: 'Você busca entender o problema dos clientes que não precisam da solução/produto, convence-os de que precisam e consegue vender.', value: 0, class: 'wrong' },
       { answer: 'Você entende que os clientes se incomodam com vendedores e espera eles demonstrarem interesse na sua solução/produto para fazer a venda; de modo a não incomodar os clientes com abordagens frias.', value: 0, class: 'wrong' },
@@ -78,7 +78,7 @@ export class UserComponent implements OnInit{
     id: 'question5',
   },
 
-    {question: '6. Determine se é Verdadeiro (V) ou Falso (F): \nI) Na estratégia de Inbound Sales, o conteúdo – que pode ser blog post, vídeo, webinar, etc – é a principal ferramenta para a atração do lead \nII) A estratégia de Outbound Sales é necessariamente ativa',
+    {question: '6. Determine se é Verdadeiro (V) ou Falso (F): \nI) Na estratégia de Inbound Sales, o conteúdo – que pode ser blog post, vídeo, webinar, etc – é a principal ferramenta para a atração do lead \nII) A estratégia de Outbound Sales é necessariamente ativa\nIII) Um lead Outbound sabe quando o vendedor irá entrar em contato com ele e na maioria das vezes tem bom conhecimento do produto a ser ofertado\nIV) Inbound e Outbound são estratégias que concorrem entre si e não costumam poder ser adotadas em conjunto por uma empresa\nV) A estratégia de Inbound tende a ser mais barata e menos demorada para entregar resultados, já a estratégia de Outbound mais cara e gradual',
     alternatives: [
       { answer: 'F - F - V - F - V', value: 0, class: 'wrong' },
       { answer: 'V - V - F - F - F', value: 10, class: 'right' },
@@ -111,7 +111,7 @@ export class UserComponent implements OnInit{
     id: 'question8',
   },
 
-    {question: '9. Qual das duas abordagens de e-mail parece fazer mais sentido para você e por quê?\nI) Assunto: Apresentação Gabriel - Olá, Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. É o caso de vocês? Faz sentido conversar 10 minutos sobre o assunto em algum horário após as 16:00 de quinta ou sexta?\nII) Assunto: Como melhorar seu recrutamento! Olá Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. Por favor me deixe saber se é um assunto importante para vocês. Obrigado!',
+    {question: '9. Qual das duas abordagens de e-mail parece fazer mais sentido para você e por quê?\nI) Assunto: Apresentação Gabriel - Olá, Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. É o caso de vocês? Faz sentido conversar 10 minutos sobre o assunto em algum horário após as 16:00 de quinta ou sexta?\n\nII) Assunto: Como melhorar seu recrutamento! Olá Pedro, Aqui é o Gabriel, da Goal Hunter. Nós ajudamos empresas a encontrar talentos nas áreas de vendas e CS, e vi que possuem várias semelhanças com empresas de software que atendemos hoje. Outros CEOs que ajudo atualmente estão especialmente preocupados em encontrar os melhores profissionais de mercado de forma mais prática. Por favor me deixe saber se é um assunto importante para vocês. Obrigado!',
     alternatives: [
       { answer: 'A I, pois a personalização no assunto e a call-to-action no fim do e-mail tendem a aumentar os índices de abertura e resposta, respectivamente', value: 0, class: 'wrong' },
       { answer: 'A I, pois, apesar da sugestão final ter diferentes percepções por públicos mais ou menos corporativos, possui um assunto menos interruptivo', value: 0, class: 'wrong' },
@@ -145,11 +145,11 @@ export class UserComponent implements OnInit{
   constructor(
     public userService: UserService,
     public authService: AuthService,
-    private route: ActivatedRoute,
-    private location : Location,
-    private router: Router,
+    public route: ActivatedRoute,
+    public location : Location,
+    public router: Router,
     public db: AngularFirestore,
-    private http: HttpClient
+    public http: HttpClient
   ) {
 
   }
