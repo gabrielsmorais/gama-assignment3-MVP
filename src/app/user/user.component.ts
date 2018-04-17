@@ -177,13 +177,14 @@ export class UserComponent implements OnInit{
 
     this.outro = [].slice.call(document.querySelectorAll(".right:checked"));
     let result = (this.outro.length / this.questions.length) * 100;
+    result = Number(result.toFixed(2));
 
     if (result < 50) {
-      this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é junior.`
+      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é junior.`
     } else if (result > 51 && result < 80){
-      this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é pleno.`
+      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é pleno.`
     }else{
-      this.finalResult = `Você acertou ${result.toFixed(2)}% e seu nível de senioridade é senior.`
+      this.finalResult = `Você acertou ${result}% e seu nível de senioridade é senior.`
     }
     this.router.navigate(['/thank-you']);
     this.userService.resultado = this.finalResult;
