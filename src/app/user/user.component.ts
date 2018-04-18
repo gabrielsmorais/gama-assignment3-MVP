@@ -21,6 +21,7 @@ import { environment } from '../../environments/environment';
 
 export class UserComponent implements OnInit{
 
+  level;
   finalResult;
   outro: Element[];
   all: Element[];
@@ -179,18 +180,23 @@ export class UserComponent implements OnInit{
     let result = (this.outro.length / this.questions.length) * 100;
     result = Number(result.toFixed(2));
 
+    let level;
     if (result < 50) {
       this.finalResult = `Você acertou ${result}% e seu nível de senioridade é junior.`
+      level = 'Júnior';
     } else if (result > 51 && result < 80){
       this.finalResult = `Você acertou ${result}% e seu nível de senioridade é pleno.`
+      level = 'Pleno';
     }else{
       this.finalResult = `Você acertou ${result}% e seu nível de senioridade é senior.`
+      level = 'Senior';
     }
     this.router.navigate(['/thank-you']);
     this.userService.resultado = this.finalResult;
     const req = this.http.post(`${environment.firebase.databaseURL}/results.json`, {
       result:result,
-      user:this.user
+      user:this.user,
+      senioridade: level
     })
       .subscribe(
         res => {
