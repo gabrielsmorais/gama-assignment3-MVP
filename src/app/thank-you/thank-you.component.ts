@@ -15,7 +15,7 @@ export class ThankYouComponent implements OnInit {
 
   constructor(
     public user: UserService,
-    private location : Location,
+    public location : Location,
     public authService: AuthService,
   ) {
     this.resultado = user.resultado;
